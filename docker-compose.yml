@@ -11,8 +11,8 @@ services:
         while true; do
           echo 'Starting Mattermost user collection script...'
           python main.py
-          echo 'Script finished. Waiting 30 minutes for the next run...'
-          sleep 3600 # 30 minutes
+          echo 'Script finished. Waiting 15 minutes for the next run...'
+          sleep 900 # 15 minutes
         done
       "
 
