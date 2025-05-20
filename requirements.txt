@@ -1,0 +1,3 @@
+mattermostdriver
+psycopg
+python-dotenv 

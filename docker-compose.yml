@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env # Make sure your .env file is present in the same directory
+    command: >
+      sh -c "
+        while true; do
+          echo 'Starting Mattermost user collection script...'
+          python main.py
+          echo 'Script finished. Waiting 30 minutes for the next run...'
+          sleep 3600 # 30 minutes
+        done
+      "
+
